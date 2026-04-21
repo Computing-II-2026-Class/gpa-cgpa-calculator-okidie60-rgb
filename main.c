@@ -58,9 +58,8 @@ const char*sem2_names[SEM2_COURSES]={
 };
 const double sem2_credits[SEM2_COURSES]={4,3,3,3,3,3,3,3};
 
-int main(void) {
-    /* Declare variables here */
-    int sem1_scores[SEM1_COURSES];
+int main(){
+   int sem1_scores[SEM1_COURSES];
    int sem2_scores[SEM2_COURSES];
    double sem1_gp[SEM1_COURSES];
    double sem2_gp[SEM2_COURSES];
@@ -68,17 +67,11 @@ int main(void) {
    double sem1_total_credits=0.0, sem2_total_credits=0.0;
    int i;
 
-    /* Read 16 scores */
-
-    /* Validate input */
-     printf("==============================================================================================\n");
+   printf("==============================================================================================\n");
    printf("                         YEAR ONE ACADEMIC GPA/CGPA CALCULATOR\n");
    printf("==============================================================================================\n\n");
-   
-    /* Determine grades and grade points */
-   
-    /* Compute Semester I GPA */
-     //----------------SEMESTER 1 INPUT-----------------------
+
+   //----------------SEMESTER 1 INPUT-----------------------
    printf("-----------------------------SEMESTER 1--------------------------------------------------------\n");
    for(i=0; i<SEM1_COURSES; i++){
     int score;
@@ -93,9 +86,8 @@ int main(void) {
     sem1_weighted_sum += sem1_gp[i]*sem1_credits[i];
     sem1_total_credits += sem1_credits[i];
    }
-    
-    /* Compute Semester II GPA */
-    //---------SEMESTER 2 INPUT--------------------
+
+   //---------SEMESTER 2 INPUT--------------------
    printf("\n----------------------SEMESTER 2-------------------\n");
    for(i=0; i<SEM1_COURSES; i++){
     int score;
@@ -111,23 +103,8 @@ int main(void) {
     sem2_total_credits += sem2_credits[i];
    }
 
-    /* Compute CGPA */
-    
-    /* Determine classification */
-    printf("Classification: ");
-   if(cgpa>=4.40 &&cgpa<=5.00)
-    printf("First Class\n");
-   else if(cgpa>=3.60)
-    printf("Second Class Upper\n");
-   else if(cgpa>=2.80)
-    printf("Second Class Lower\n");
-   else if(cgpa>=2.00)
-    printf("Pass\n");
-   else
-    printf("Fail\n");
-
-    /* Display full academic report */
-    printf("\n\n");
+   //FULL ACADEMIC REPORT
+   printf("\n\n");
    printf("================================================================================================\n");
    printf("                             FULL ACADEMIC REPORT - YEAR ONE\n");
    printf("=================================================================================================\n");
@@ -168,5 +145,18 @@ int main(void) {
    printf("Semester 2 GPA: %.2f\n",sem2_gpa);
    printf("CGPA: %.2f\n",cgpa);
 
-    return 0;
+   //Final Academic Classification
+   printf("Classification: ");
+   if(cgpa>=4.40 &&cgpa<=5.00)
+    printf("First Class\n");
+   else if(cgpa>=3.60)
+    printf("Second Class Upper\n");
+   else if(cgpa>=2.80)
+    printf("Second Class Lower\n");
+   else if(cgpa>=2.00)
+    printf("Pass\n");
+   else
+    printf("Fail\n");
+
+   return 0;
 }
