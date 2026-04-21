@@ -81,7 +81,7 @@ int main() {
         sprintf(classification, "Fail");
     }
 
-    //Display Full Academic Report
+    //Full Academic Report
     //Semester I
     printf("Year One, Semester I\n");
     printf("---------------------------------------\n");
