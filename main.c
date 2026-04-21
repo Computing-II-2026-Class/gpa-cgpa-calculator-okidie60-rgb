@@ -4,21 +4,6 @@ Registration Number: 25/U/BIE/01413/PE
 */
 
 #include <stdio.h>
-int getGradePoint(int score){
-    if (score >= 80) return 5;
-    else if (score >= 70) return 4;
-    else if (score >= 60) return 3;
-    else if (score >= 50) return 2;
-    else return 0;
-}
-
-char getGrade(int score){
-    if (score >= 80) return 'A';
-    else if (score >= 70) return 'B';
-    else if (score >= 60) return 'C';
-    else if (score >= 50) return 'D';
-    else return 'F';
-}
 
 int main(void) {
     /* Declare variables here */
@@ -85,6 +70,21 @@ int main(void) {
     }
 
     /* Determine grades and grade points */
+    int getGradePoint(int score){
+    if (score >= 80) return 5;
+    else if (score >= 70) return 4;
+    else if (score >= 60) return 3;
+    else if (score >= 50) return 2;
+    else return 0;
+}
+
+char getGrade(int score){
+    if (score >= 80) return 'A';
+    else if (score >= 70) return 'B';
+    else if (score >= 60) return 'C';
+    else if (score >= 50) return 'D';
+    else return 'F';
+}
 
     /* Compute Semester I GPA */
     int sem1_total_credits = 0, sem1_weighted_sum = 0;
